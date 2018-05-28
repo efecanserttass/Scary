@@ -31,6 +31,7 @@
     "xmlhttprequest": "^1.8.0",
     "ytdl-core": "^0.20.2",
     "discord.js": "^11.3.2",
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.1",
+    "moment": "^2.22.1"
   }
 }
