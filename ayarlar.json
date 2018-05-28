@@ -1,6 +1,5 @@
 {
   "prefix": "s!",
   "sahip": "419428992752549909",
-  "surum": "1.0.0",
-  "token": "process.env.BOT_TOKEN"
+  "surum": "1.0.0"
 }
