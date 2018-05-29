@@ -93,7 +93,7 @@ client.unload = command => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
-    msg.reply('**Aleyküm Selam, Hoşgeldin Scary Davet Etmek İçin ```s!davet``` Yazabilirsiniz**');
+    msg.reply('**Aleyküm Selam, Hoşgeldin**');
   }
 });
 
