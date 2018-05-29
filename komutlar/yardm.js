@@ -1,38 +1,24 @@
+Bu benim kullandığım
 const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
 
-var prefix = ayarlar.prefix;
+module.exports.run = async (bot, message, args) => {
+  let embed = new Discord.RichEmbed()
+    .setTitle("Categories")
+    .setAuthor("85 Commands", bot.user.displayAvatarURL)
+    .addField("Moderation", "`" + message.prefix + "mod`", true)
+    .addField("Games", "`" + message.prefix + "games`", true)
 
-exports.run = (client, message, params) => {
-  if (!params[0]) {
-    const commandNames = Array.from(client.commands.keys());
-    const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-    message.author.sendCode('asciidoc', `= Komut Listesi =\n\n[Komut hakkında bilgi için ${ayarlar.prefix}yardım <komut adı>]\n\n${client.commands.map(c => `${ayarlar.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`);
-  if (message.channel.type !== 'dm') {
-    const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et. :postbox:');
-    message.channel.sendEmbed(ozelmesajkontrol) }
-  } else {
-    let command = params[0];
-    if (client.commands.has(command)) {
-      command = client.commands.get(command);
-      message.author.sendCode('asciidoc', `= ${command.help.name} = \n${command.help.description}\nDoğru kullanım: ` + prefix + `${command.help.usage}`);
-    }
-  }
-};
 
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['h', 'halp', 'help', 'y'],
-  permLevel: 0
-};
+    .addField("NSFW", "`" + message.prefix + "nsfw`", true)
+  
 
-exports.help = {
-  name: 'yardım',
-  description: 'Tüm komutları gösterir.',
-  usage: 'yardım [komut]'
-};
+
+    .addField("Fun", "`" + message.prefix + "fun`", true)
+    .addField("Statistics", "`" + message.prefix + "statistics`", true)
+    .addField("Developer", "`" + message.prefix + "dev`", true)
+  .setFooter("If you found a bug please report it using " + message.prefix + "bugreport")
+    message.channel.send(embed);
+}
+module.exports.help = {
+    name: "yardım"
+}
