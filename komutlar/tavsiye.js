@@ -21,7 +21,7 @@ const tavsiye = new Discord.RichEmbed()
   .setDescription(':newspaper2: **' + message.author.tag + '** adlı kullanıcının önerisi;')
   .addField(':envelope: Kullanıcı Bilgileri', '✭ ID: ' + message.author.id + '\n✭ Adı: ' + message.author.username + '\n✭ Tagı: ' + message.author.discriminator + '')
   .addField(':pencil: Tavsiye', mesaj)
-return client.channels.get("406832593758322688").send(tavsiye);
+return client.channels.get("419936204117770241").send(tavsiye);
 };
 
 exports.conf = {
