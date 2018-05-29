@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
-    .setDescription("[DesertHawk BOT](https://discord.gg/Xc5c6gs)")
-    .setColor("#15f153")
+    .setDescription("[Scary]()")
+    .setColor("#15f15
     .setThumbnail(bicon)
     .addField("Kullanıcı Adı:", bot.user.username)
     .addField("Kuruluş Tarihi:", bot.user.createdAt)
