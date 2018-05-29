@@ -6,7 +6,7 @@ const ayarlar = require('../ayarlar.json');
 var prefix = ayarlar.prefix;
 
 module.exports = client => {
-  client.user.setActivity('s! Scary 7/24 Aktif Artık', { type: 'WATCHING' })
+  client.user.setActivity('s!yardım Scary 7/24 Aktif Artık Sizi', { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
