@@ -8,7 +8,7 @@ exports.run = (client, message) => {
                    icon_url: ""
                  },
                color: 0xD97634,
-               description: "**atombom komutu yenilendi \nçayiç komutu yenilendi \nngif komutu eklendi \nherkesebendençay komutu yenilendi \nayrılıkgif komutu eklendi** \n__***Her Hafta bu komutu kullanın lütfen***__"
+               description: "**atombom komutu yenilendi \nçayiç komutu yenilendi \nnicegif komutu eklendi \nherkesebendençay komutu yenilendi \nailemiz Komutu Eklendi** \n__***Botumuz Artık 7/24 Aktif***__"
              }});
 };
 
