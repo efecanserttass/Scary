@@ -1,5 +1,5 @@
 client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find('name', 'scary');
+  const channel = member.guild.channels.find('name', 'scary-log');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
