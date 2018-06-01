@@ -1,21 +1,18 @@
 client.on('guildMemberAdd', member => {
-  let guild = member.guild;
-  let joinRole = guild.roles.find('name', 'Üye');
-  member.addRole(joinRole);
-
-  const channel = member.guild.channels.find('name', 'scary-log');
+  member.addRole(member.guild.roles.find(r => r.name.startsWith('')));
+  const channel = member.guild.channels.find('name', 's-log');
   if (!channel) return;
-  const embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setAuthor(member.user.username, member.user.avatarURL)
-  .setThumbnail(member.user.avatarURL)
-  .setTitle('📥 | Sunucuya katıldı | Aha Sunucuya Kişi Geldi Loo😂!')
-  .setTimestamp()
-  channel.sendEmbed(embed);
+ const embed = new Discord.RichEmbed()
+ .setColor('RANDOM')
+ .setAuthor(member.user.tag, member.user.avatarURL || member.user.defaultAvatarURL)
+ .setThumbnail(member.user.avatarURL || member.user.defaultAvatarURL)
+ .setTitle('Hey Bro Hoşgelmişen')
+ .setDescription(`Sunucuya katıldı Hoşgeldin Bro${member.guild.memberCount} üye]!`)
+ .setFooter('Scary', client.user.avatarURL)
+ .setTimestamp()
+ channel.send(embed);
 });
 
-
- 
  
   
   
