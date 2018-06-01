@@ -97,23 +97,18 @@ client.on('message', msg => {
   }
 });
 
-client.on('guildMemberAdd', member => {
-  member.addRole(member.guild.roles.find(r => r.name.startsWith('')));
-  const channel = member.guild.channels.find('name', 'giden-gelen');
-  if (!channel) return;
- const embed = new Discord.RichEmbed()
- .setColor('RANDOM')
- .setAuthor(member.user.tag, member.user.avatarURL || member.user.defaultAvatarURL)
- .setThumbnail(member.user.avatarURL || member.user.defaultAvatarURL)
- .setTitle('Üye katıldı')
- .setDescription(`Sunucuya katıldı Hoşgeldin Bro${member.guild.memberCount} üye]!`)
- .setFooter('Scary', client.user.avatarURL)
- .setTimestamp()
- channel.send(embed);
+
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'yusuf' {
+    msg.reply('Yusuf Canım Seni Çağrıyorlar!');
+	msg.react('👍')
+	msg.delete();
+  }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'amk') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Sana Küfür Etmeni Kim Söyledi Bilmiyormusun **Yasak**!');
 	msg.react('🖕')
 	msg.delete();
@@ -121,15 +116,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'Amk') {
-    msg.reply('Sana Küfür Etmeni Kim Söyledi Bilmiyormusun **Yasak**!');
-	msg.react('🖕')
-	msg.delete();
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'AMK') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek **Yasaktır**');
 	msg.react('🖕')
 	msg.delete();
@@ -137,7 +124,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'aMK') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Deneme Boşuna  !');
 	msg.react('🖕')
 	msg.delete();
@@ -145,7 +132,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'oc') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -153,24 +140,24 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'Oc') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
   if (msg.author.bot) return;
-  if (msg.content.toLowerCase().includes('oc')) msg.reply('**Yazık Küfür Etmek Çok Kötü Birşey !**');
-  if (msg.content.toLowerCase().includes('oruspu')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
-  if (msg.content.toLowerCase().includes('pic')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
-  if (msg.content.toLowerCase().includes('mk')) msg.reply('**Küfür Etmek Yasaktır Scary 👎 !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Yazık Küfür Etmek Çok Kötü Birşey !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary 👎 !**');
   if (msg.content.toLowerCase().includes('anan')) msg.reply('**Küfür Etmek Yasaktır Scary  !**');
-  if (msg.content.toLowerCase().includes('yarram')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
-  if (msg.content.toLowerCase().includes('yarrak')) msg.reply('**YYasaklanmış Mesaj Küfür Yasaktır Scary!**');
-  if (msg.content.toLowerCase().includes('amk')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
-  if (msg.content.toLowerCase().includes('top')) msg.reply('**Küfür Etmek Yasaktır Scary!**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**YYasaklanmış Mesaj Küfür Yasaktır Scary!**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary !**');
+  if (msg.content.toLowerCase().includes('')) msg.reply('**Küfür Etmek Yasaktır Scary!**');
   msg.delete();
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'oç') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -178,7 +165,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'Oç') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary!');
 	msg.react('🖕')
 	msg.delete();
@@ -186,7 +173,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'OC') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary!');
 	msg.react('🖕')
 	msg.delete();
@@ -194,7 +181,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'OÇ') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -202,7 +189,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'pic') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -210,7 +197,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'piç') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -218,7 +205,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'Pic') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Yazık Küfür Etmek Çok Kötü Birşey !');
 	msg.react('🖕')
 	msg.delete();
@@ -226,7 +213,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'Piç') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -234,7 +221,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'PİC') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
@@ -242,7 +229,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'PİÇ') {
+  if (msg.content.toLowerCase() === '') {
     msg.reply('Küfür Etmek Yasaktır Scary !');
 	msg.react('🖕')
 	msg.delete();
