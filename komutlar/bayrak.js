@@ -5,7 +5,7 @@ exports.run = (client, message) => {
  message.channel.send({embed: {
 		  file:"https://media.giphy.com/media/yDm4Ry6XU77Py/giphy.gif",
           color: 0xD97634,
-		  description: "**:peach: T鈜k Bayra MarsyTkiye !**"
+		  description: "**:peach: Türk bayrağı !**"
             }});
 };
 
@@ -18,6 +18,6 @@ exports.conf = {
 
 exports.help = {
   name: 'bayrak',
-  description: 'Tk Bayra G飉terir',
+  description: 'Türk bayrağı Gôsterir',
   usage: 'bayrak'
 };
