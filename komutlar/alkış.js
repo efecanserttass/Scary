@@ -7,11 +7,11 @@ exports.run = (client, message, params) => {
     .setColor(0xFF0000)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .addField('Alk谋艧')
+    .addField('Alkış')
     return message.author.sendEmbed(ozelmesajuyari); }
     if (message.channel.type !== '..') {
       const sunucubilgi = new Discord.RichEmbed()
-    .setAuthor('Alk谋艧 馃憦馃憛')
+    .setAuthor('Alkış bebeğim alkış')
     .setColor(3447003)
     .setTimestamp()
     .setDescription('')
@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'alk谋艧',
-  description: 'Alk谋艧 gifi g枚nderir.',
-  usage: 'alk谋艧'
+  name: 'alkış',
+  description: 'Alkış gifi gönderir.',
+  usage: 'alkış'
 };
