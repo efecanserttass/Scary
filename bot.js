@@ -157,7 +157,7 @@ return msg.channel.send({embed})}
   let joinRole = guild.roles.find('name', 'Üye'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
-  const channel = member.guild.channels.find('name', 'mod-log'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  const channel = member.guild.channels.find('name', 's-log'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -169,7 +169,7 @@ return msg.channel.send({embed})}
 });
 
 client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find('name', 'mod-log');
+  const channel = member.guild.channels.find('name', 's-log');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -213,7 +213,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 's!desteksunucusu') {
-    msg.channel.send(':inbox_tray: Destek sunucusuna katılmak için "https://discord.gg/Xc5c6gs" adresine tıklayabilirsiniz.');
+    msg.channel.send(':inbox_tray: Destek sunucusuna katılmak için "https://discord.gg/SnystEb" adresine tıklayabilirsiniz.');
   }
 });
 
