@@ -119,7 +119,7 @@ client.on('message', message => {
   let args = message.content.split(' ').slice(1);
 
   if (command === 'bug-gönder' || command === 'bug') {
-    let str = '<@406832593758322688>';
+    let str = '<@419936204117770241>';
     let id = str.replace(/[<@!>]/g, '');
     let mesaj = args.slice(0).join(' ');
     if (mesaj.length < 1) return message.reply(`Bulduğunuz bug nedir?`);
@@ -212,19 +212,19 @@ client.on('message', message => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'd!desteksunucusu') {
+  if (msg.content.toLowerCase() === 's!desteksunucusu') {
     msg.channel.send(':inbox_tray: Destek sunucusuna katılmak için "https://discord.gg/Xc5c6gs" adresine tıklayabilirsiniz.');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'd!reklamengelle') {
+  if (msg.content.toLowerCase() === 's!reklamengelle') {
     msg.channel.send(':white_check_mark: Başarıyla reklam engelleme özelliği aktifleştirildi. Bu özellik "**Kullanıcıları Yasakla**" yetkisi olanlarda çalışmayacaktır. Bundan sonra `Discord sunucu davetleri`, `Facebook linkleri`, `YouTube linkleri`, `Dailymotion linkleri` ve `Google linkleri` gibi linkler engellenecek!');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'd!küfürkoruması') {
+  if (msg.content.toLowerCase() === 's!küfürkoruması') {
     msg.channel.send(':white_check_mark: Başarıyla küfür engelleme özelliği aktifleştirildi. Bu özellik "**Kullanıcıları Yasakla**" yetkisi olanlarda çalışmayacaktır. Bundan sonra kanalda edilen küfürler engellenecek; lütfen bottan mesajları yönet yetkisini kaldırmayın!');
   }
 });
@@ -236,7 +236,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'd!komutlar') {
+  if (msg.content.toLowerCase() === '!komutlar') {
     msg.channel.send('Bütün komutları ayrıntılı bir şekilde görmek için "http://komutlar.deserthawk.rf.gd/" adresini ziyaret edin :sunglasses:');
   }
 });
@@ -248,7 +248,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'd!seviye') {
+  if (msg.content.toLowerCase() === 's!seviye') {
     msg.channel.send(':warning: Üzgünüm, seviye sistemi botu büyük zararlara uğrattığından dolayı kaldırıldı. Lütfen daha fazla ayrıntı için blogumuzdaki ``(http://blog.deserthawk.rf.gd)`` yazımızı okuyun.');
   }
 });
