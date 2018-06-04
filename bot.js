@@ -157,25 +157,25 @@ return msg.channel.send({embed})}
   let joinRole = guild.roles.find('name', 'Üye'); // Burada girişte verilcek rolu seçelim.
   member.addRole(joinRole); // seçtiğimiz rolu verelim.
 
-  const channel = member.guild.channels.find('name', 'mod-log'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
+  const channel = member.guild.channels.find('name', 's-log'); // burda ise kanalı belirleyelim hangi kanala atsın ben mod-log dedim.
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('📥 | Sunucuya katıldı!')
+  .setTitle('📥 | Sunucua Hoşgelmişen!')
   .setTimestamp()
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
 
 client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find('name', 'mod-log');
+  const channel = member.guild.channels.find('name', 's-log');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('📤 | Sunucudan ayrıldı | Görüşmek üzere!')
+  .setTitle('📤 | Sunucudan ayrıldı | Görüşmek üzere | Niye Gittin Leyn ~')
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
@@ -271,4 +271,4 @@ client.on('message', msg => {
 }
 });
 
-client.login(ayarlar.token);
+client.login(process.env.BOT_TOKEN);
