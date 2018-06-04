@@ -1,12 +1,12 @@
 {
-  "name": "deserthawk",
+  "name": "Scary",
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
   "scripts": {
     "test": "node bot.js"
   },
-  "author": "Yunus",
+  "author": "Yusuf",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.1",
