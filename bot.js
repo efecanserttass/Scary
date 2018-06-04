@@ -271,38 +271,7 @@ client.on('message', msg => {
 }
 });
 
-const Discord = require('discord.js');
-const ytdl = require('ytdl-core');
-const ayarlar = require('./ayarlar.json');
-const client = new Discord.Client({ fetchAllMembers: false, apiRequestMethod: 'sequential' });
-client.login(ayarlar.token).then(() => console.log(`${client.user.tag} (${client.user.id}) ismi ile giriş yapıldı.`))
-const connections = new Map();
-let broadcast;
 
-startsWith('/kuyruk')) {
-    if (connections.has(m.guild.id)) {
-      const connData = connections.get(m.guild.id);
-      const queue = connData.queue;
-      m.reply(queue.map(q => q.url));
-
-  }
-});
-
-function doQueue(connData) {
-  const conn = connData.conn;
-  const queue = connData.queue;
-  const item = queue[0];
-  if (!item) return;
-  const stream = ytdl(item.url, { filter: 'audioonly' }, { passes: 3 });
-  const dispatcher = conn.playStream(stream);
-  stream.on('info', info => {
-    item.m.reply(`Çalınan: **${info.title}**`);
-  });
-  dispatcher.on('end', () => {
-    queue.shift();
-    doQueue(connData);
-  });
-  dispatcher.on('error', (...e) => console.log('dispatcher', ...e));
 
 
 
