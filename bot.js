@@ -20,8 +20,8 @@ bot.js
         let status = [
             `Benim Prefixim: ${botconfig.prefix}`,
             `Teşekkürler: ${bot.guilds.size} sunucu.`,
-            `♥ Zappara Pro ♥`,
-            `Sahibi: Enes Onur Ata#9427`,
+            `♥ Scary ♥`,
+            `Sahibi: Yusuf`,
             `Hizmet veriyor: ${bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Kullanıcıya`
         ];
         let rstatus = Math.floor(Math.random() * status.length);
@@ -61,7 +61,7 @@ bot.js
     let prefix = prefixes[message.guild.id].prefixes;
 	if(message.author.bot) return undefined;
 	if(message.channel.type === 'dm') return ;
-        if(message.content.toLowerCase() === '<@440815976880275465>'){
+        if(message.content.toLowerCase() === '<@419936204117770241>'){
         let embed = new Discord.RichEmbed()
        .setTitle("Zappara Pro")
        .addField("Prefix", `\`${prefix}\``, true)
@@ -132,13 +132,13 @@ bot.js
 
 	});
 	bot.on('guildMemberAdd', member => {
-    bot.channels.get('450952678781091842').setName(`Toplam Üye: ${member.guild.memberCount}`)
+    bot.channels.get('451091996287696910').setName(`Toplam Üye: ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('450952771752034305').setName(`Üye Sayısı: ${humans}`)
+    bot.channels.get('453198762102489098').setName(`Üye Sayısı: ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('450952839389511681').setName(`Bot Sayısı: ${bots}`)
+    bot.channels.get('453199063958159370').setName(`Bot Sayısı: ${bots}`)
 	const members = member.guild.memberCount;
-	const channel = member.guild.channels.find('name', 'zp_ekleyenler');
+	const channel = member.guild.channels.find('name', 's-ekleyenler');
 	if (!channel) return;
 
        let Role = member.guild.roles.find(`name`, "Bot");
@@ -157,12 +157,12 @@ bot.js
 	channel.send(Embed);
 	});
 	bot.on('guildMemberRemove', member => {
-    bot.channels.get('450952678781091842').setName(`Toplam Üye: ${member.guild.memberCount}`)
+    bot.channels.get('453199237459738625').setName(`Toplam Üye: ${member.guild.memberCount}`)
     let humans = member.guild.members.filter(m => !m.user.bot).size;
-    bot.channels.get('450952771752034305').setName(`Üye Sayısı: ${humans}`)
+    bot.channels.get('453199322255851521').setName(`Üye Sayısı: ${humans}`)
     let bots = member.guild.members.filter(m => m.user.bot).size;
-    bot.channels.get('450952839389511681').setName(`Bot Sayısı: ${bots}`)
-	const channel = member.guild.channels.find(`name`, 'zp_atanlar');
+    bot.channels.get('453199491835887616').setName(`Bot Sayısı: ${bots}`)
+	const channel = member.guild.channels.find(`name`, 's-atanlar');
 	if(!channel) return; 
 	let Embed = new Discord.RichEmbed()
 	.setColor("#e26346")
@@ -173,7 +173,7 @@ bot.js
 	});
 
 	bot.on('guildCreate', guild => {
-	      let channel = bot.channels.get("450955859510427650")
+	      let channel = bot.channels.get("453206226390745098")
         const embed = new Discord.RichEmbed()
         .setColor("#cde246")
         .setAuthor(`Katıldım - ${guild.name}`)
@@ -185,7 +185,7 @@ bot.js
          channel.send(embed);
 	});
 	bot.on('guildDelete', guild => {
-	      let channel = bot.channels.get("450955966158995456")
+	      let channel = bot.channels.get("453206192718872577")
         const embed = new Discord.RichEmbed()
         .setColor("#cde246")
         .setAuthor(`Ayrıldım - ${guild.name}`)
