@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'deyişikahtapot',
+  name: 'değişikahtapot',
   description: 'Değişik Bişey.',
   usage: 'deyişikahtapot'
 };
