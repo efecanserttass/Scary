@@ -1,5 +1,5 @@
 const prefix = "ayarlar.prefix";
-const Discors require("discord.js");
+const Discords require("discord.js");
 const client = new Discord.Client();
  
 	exports.run = ('message', msg => {
