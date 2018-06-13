@@ -23,9 +23,9 @@ exports.run = async (client, msg, args) => {
  color: Math.floor(Math.random() * (0xFFFFFF + 1)),
  description: (':no_entry_sign: Ya geçerli birini etiketle ya da sana sövmemi istiyosan kendini etiketle.')
 }});
-  if(member.id === "406832593758322688")return msg.channel.send({embed: {
+  if(member.id === "419936204117770241")return msg.channel.send({embed: {
  color: Math.floor(Math.random() * (0xFFFFFF + 1)),
- description: (':no_entry_sign: Sen Kimsin Emrenin Sevgilisine Sövüyon Oç.')
+ description: (':no_entry_sign: Sen Kimsin Sahibime Sövüyon Amına Kodumun Jedayı.')
 }})
   if(member.id === "406832593758322688")return msg.channel.send({embed: {
  color: Math.floor(Math.random() * (0xFFFFFF + 1)),
