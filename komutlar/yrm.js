@@ -17,7 +17,7 @@ exports.run = (client, message) => {
   	.addField(" Kullanıcı Komutları", "**• Yeni Kodlar Gelicek\nkurucu • Sunucunun kurucusunu gösterir.\nkullanıcıbilgim • Bu komutu kullanan her kimse hakkında bilgi verir.**\n", true)
     .addField("Müzik Komutları Beta [KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
     .addField("Yapımcı Komutları", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
-    .setTitle("Yapımcı Yusuf#2022 Destekleyici Oxygen#7035")
+    .setLast("Yapımcı Yusuf#2022 Destekleyici Oxygen#7035")
   	message.channel.send({embed});
 };
 
