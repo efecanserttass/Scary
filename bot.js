@@ -274,7 +274,7 @@ client.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + 'destek') {
 	       if(!msg.guild) return
 	 msg.reply('Operatorlere bildirim gönderdim!');
-    client.channels.get("434669450977869834").sendMessage(`**${msg.author.tag} adlı kişi destek talebi açtı**`);
+    client.channels.get("419936204117770241").sendMessage(`**${msg.author.tag} adlı kişi destek talebi açtı**`);
   }	
 });
 
