@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message, args) {
     message.channel.send({embed: {
         color: 0xD97634,
-        description: "👑 **Yapımcım**\n\n\n **•》 Yusuf Bülbül =》@☬ Yusuf  ☬ ˢᶜᵃʳʸ#2022 **\n"
+        description: "👑 **Yapımcım**\n\n\n **•》 Yusuf Bülbül =》@Yusuf#2022 **\n"
       }});
 };
 
