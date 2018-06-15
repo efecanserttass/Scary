@@ -5,7 +5,7 @@ const ayarlar = require('../ayarlar.json');
 exports.run = (client, message) => {
   const embed = new Discord.RichEmbed()
   
-  .setTitle("Bot Komutları")
+  .setTitle("Botumuzun Komutları")
   .setAuthor("Scary | Bütün Haklar Gizlidir ", "")
   .setColor("RANDOM")
   .setDescription('**s!davet • Botun davet linkini atar.\nYeni Kodlar Gelicek\ns!bug • Bottaki bugu bildirmenizi sağlar.\ns!ping • Botun pingini gösterir.\ns!sunucubilgi • Bu komutu hangi sunucuda kullanıysanız oranın bilgisini verir.\ns!tavsiye • Botun sahibine verdiğiniz tavsiyeyi gönderir.**\n')
@@ -17,7 +17,7 @@ exports.run = (client, message) => {
   	.addField(" Kullanıcı Komutları", "**• Yeni Kodlar Gelicek\nkurucu • Sunucunun kurucusunu gösterir.\nkullanıcıbilgim • Bu komutu kullanan her kimse hakkında bilgi verir.**\n", true)
     .addField("Müzik Komutları Beta [KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
     .addField("Yapımcı Komutları", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
-    .setLast("Yapımcı Yusuf#2022 Destekleyici Oxygen#7035")
+    .addField("**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**")
   	message.channel.send({embed});
 };
 
@@ -31,5 +31,5 @@ exports.conf = {
 exports.help = {
   name: 'yardım',
   description: 'Bot ile ilgili komut listesini verir.',
-  usage: 'yardım'
+  usage: 'yardım', 'y'
 };
