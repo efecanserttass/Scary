@@ -31,5 +31,5 @@ exports.conf = {
 exports.help = {
   name: 'yardım',
   description: 'Bot ile ilgili komut listesini verir.',
-  usage: 'yardım', 'y'
+  usage: 'yardım'
 };
