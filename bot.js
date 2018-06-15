@@ -119,7 +119,7 @@ client.on('message', message => {
   let args = message.content.split(' ').slice(1);
 
   if (command === 'bug-gönder' || command === 'bug') {
-    let str = '<@406832593758322688>';
+    let str = '<@419936204117770241>';
     let id = str.replace(/[<@!>]/g, '');
     let mesaj = args.slice(0).join(' ');
     if (mesaj.length < 1) return message.reply(`Bulduğunuz bug nedir?`);
@@ -163,7 +163,7 @@ return msg.channel.send({embed})}
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('📥 | Sunucua Hoşgelmişen!')
+  .setTitle('📥 | Sunucua Hoşgeldin | Botumuzu Eklerseniz Seviniriz !')
   .setTimestamp()
   channel.sendEmbed(embed); // belirlediğimiz kanala mesaj gönderelim.
 });
@@ -175,7 +175,7 @@ client.on('guildMemberRemove', member => {
   .setColor('RANDOM')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('📤 | Sunucudan ayrıldı | Görüşmek üzere | Niye Gittin Leyn ~')
+  .setTitle('📤 | Sunucudan ayrıldı | Görüşmek üzere ~')
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
@@ -269,13 +269,6 @@ client.on('message', msg => {
  if(msg.content.startsWith(prefix + "çal")) {
   msg.channel.sendMessage(`Müzik dinleyebilmek için https://discordbots.org/bot/421303172766892052 adresinden bota upvote vermelisiniz. (eğer upvote verdiyseniz 1 dakika beklemelisiniz)`)
 }
-});
-
-if (msg.content.toLowerCase() === prefix + 'destek') {
-	       if(!msg.guild) return
-	 msg.reply('Operatorlere bildirim gönderdim!');
-    client.channels.get("419936204117770241").sendMessage(`**${msg.author.tag} adlı kişi destek talebi açtı**`);
-  }	
 });
 
 client.login(process.env.BOT_TOKEN);
