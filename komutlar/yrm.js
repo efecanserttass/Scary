@@ -18,13 +18,15 @@ exports.run = (client, message) => {
     .addField("Müzik Komutları Beta [KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
     .addField("Yapımcı Komutları", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
     .addField("**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**")
+    .addField("Matematik Komutları", "topla • Toplama İşlemi Yapar.\nçıkar • Çıkarma İşlemi Yapar.\nçarp • Çarpma İşlemi Yapar.\nböl • Bölme İşlemi Yapar\n", true)
+    .addField("Eklenecek", "Eklenecek")
   	message.channel.send({embed});
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['bot bilgi', 'botbilgi', 'bb', 'botb', 'bbot', 'hakkında', 'bot hakkında', 'bothakkında'],
+  aliases: ['y', 'botbilgi', 'bb', 'botb', 'bbot', 'hakkında', 'bot hakkında', 'bothakkında'],
   permLevel: 0
 };
 
