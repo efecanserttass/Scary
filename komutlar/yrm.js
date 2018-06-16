@@ -19,7 +19,7 @@ exports.run = (client, message) => {
     .addField("Yapımcı Komutları", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
     .addField("**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**")
     .addField("Matematik Komutları", "topla • Toplama İşlemi Yapar.\nçıkar • Çıkarma İşlemi Yapar.\nçarp • Çarpma İşlemi Yapar.\nböl • Bölme İşlemi Yapar\n", true)
-    .addField("Eklenecek", "Eklenecek")
+    .addField("Website'm", "http://scary.sitem.xyz", true)
   	message.channel.send({embed});
 };
 
