@@ -270,8 +270,9 @@ client.on('message', msg => {
   msg.channel.sendMessage(`Müzik dinleyebilmek için https://discordbots.org/bot/421303172766892052 adresinden bota upvote vermelisiniz. (eğer upvote verdiyseniz 1 dakika beklemelisiniz)`)
 }
 });
+
 client.on('message', msg =>{
-if (msg.content === prefix + 'bot-bilgi') {
+if (msg.content.startsWith(prefix + 'bot-bilgi') {
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle('Bot - Bilgi')
