@@ -322,4 +322,24 @@ client.on("message", message => {
     }
 });
 
+client.on('message', message => {
+if (message.content.toLowerCase() === prefix + "zekam") {
+    var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein mısın krdşm"];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Zekan___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
+client.on('message', message => {
+if (message.content.toLowerCase() === prefix + "şanslı-sayım") {
+    var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "52"];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Senin Şanslı Sayın___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
 client.login(process.env.BOT_TOKEN);
