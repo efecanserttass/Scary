@@ -109,6 +109,17 @@ if (message.content === prefix + "emojiler") {
 }
 });
 
+client.on('message', message =>{
+if (msg.content === prefix + 'bot-bilgi') {
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle('Bot - Bilgi')
+        .setDescription(`Botun Prefix ${prefix}\nBotun Pingi ${client.ping}\nBotun Ismi: ${botismi}\nBotun Version: ${version}`)
+        .setFooter('Scary Bilgi Sistemi')
+        return message.channel.send(embed)
+    }
+});
+
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
