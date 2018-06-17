@@ -107,7 +107,18 @@ if (message.content === prefix + "emojiler") {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" **|** ");
   message.channel.send(emojiList);
 }
-})
+});
+
+client.on('message', msg =>{
+if (msg.content === prefix + 'bot-bilgi') {
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle('Bot - Bilgi')
+        .setDescription(`Botun Prefix ${prefix}\nBotun Pingi ${msg.client.ping}\nBotun Ismi: ${botismi}\nBotun Version: ${version}`)
+        .setFooter('Scary Bilgi Sistemi')
+        return msg.channel.send(embed)
+    }
+});
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -269,17 +280,6 @@ client.on('message', msg => {
  if(msg.content.startsWith(prefix + "çal")) {
   msg.channel.sendMessage(`Müzik dinleyebilmek için https://discordbots.org/bot/421303172766892052 adresinden bota upvote vermelisiniz. (eğer upvote verdiyseniz 1 dakika beklemelisiniz)`)
 }
-});
-
-client.on('message', msg =>{
-if (msg.content === prefix + 'bot-bilgi') {
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle('Bot - Bilgi')
-        .setDescription(`Botun Prefix ${prefix}\nBotun Pingi ${msg.client.ping}\nBotun Ismi: ${botismi}\nBotun Version: ${version}`)
-        .setFooter('Scary Bilgi Sistemi')
-        return msg.channel.send(embed)
-    }
 });
 
 client.login(process.env.BOT_TOKEN);
