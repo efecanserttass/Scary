@@ -272,7 +272,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg =>{
-if (msg.content.startsWith(prefix + 'bot-bilgi') {
+if (msg.content === prefix + 'bot-bilgi') {
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle('Bot - Bilgi')
