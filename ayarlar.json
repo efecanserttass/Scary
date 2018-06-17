@@ -1,9 +1,12 @@
-{
-  "prefix":"s!",
-  "sahip":"375686478363099138",
-  "token":"process.env.BOT_TOKEN"
-} 
-
+{  
+   "prefix": "s!" ,
+   "TOKEN": "NDQ5ODE0NzEyMDI1MDg4MDEw.DghFYA.Td6wd10B3JjFzXPnkP8gvDj_k3Q",
+   "PREFIX" : "s!", 
+   "GOOGLE_API_KEY" : "AIzaSyB1g54eujTsOj1eHILth6DENPuiOAqSQVI",
+   "sahip": "419936204117770241" ,
+   "sahip2": "432956416949485568" ,
+   "token" : "NDQ5ODE0NzEyMDI1MDg4MDEw.DghFYA.Td6wd10B3JjFzXPnkP8gvDj_k3Q"
+    }
 
 
 
