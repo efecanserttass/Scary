@@ -291,4 +291,35 @@ client.on('guildDelete', guild => {
   client.channels.get('456730080845234207').send(embed);
 });
 
+client.on("message", message => {
+    if (message.content.toLowerCase() === prefix + "sunucubilgi") {
+        const embed = new Discord.RichEmbed()
+    .setTimestamp()
+    .setAuthor(message.guild.name, message.guild.iconURL)
+    .addField('Sunucu Adı:', message.guild.name)
+    .addField('Sunucu ID:', message.guild.id)
+    .addField('Ana kanal:', message.guild.defaultChannel)
+    .addField('Sunucu Bölgesi:', message.guild.region)
+    .addField('Üye sayısı:', message.guild.memberCount)
+    .addField('Sahibi:', message.guild.owner + ' (' + message.guild.ownerID + ')')
+    .addField('Kanal sayısı:', message.guild.channels.size)
+    .addField('Oluşturulma tarihi:', message.guild.createdAt)
+            .setColor("RANDOM")
+
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "botbilgi") {
+        const embed = new Discord.RichEmbed()
+            .addField("Bot Sahibi", `<@419936204117770241>`, true)
+            .addField("Version", "0.0.1", true)
+            .addField("Toplam Sunucu Sayısı", client.guilds.size, true)
+            .addField("Toplam Kullanıcı Sayısı", client.users.size, true)
+            .addField("Toplam Kanal Sayısı", client.channels.size, true)
+            .addField("Kitaplık Türü", "discord.js")
+            .setColor("RANDOM")
+        return message.channel.sendEmbed(embed)
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
