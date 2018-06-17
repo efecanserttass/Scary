@@ -108,7 +108,7 @@ if (message.content === prefix + "emojiler") {
   message.channel.send(emojiList);
 }
 });
-h
+
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
