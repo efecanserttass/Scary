@@ -309,7 +309,7 @@ client.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "botbilgi") {
+    if (message.content.toLowerCase() === prefix + "bbilgi") {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@419936204117770241>`, true)
             .addField("Version", "0.0.1", true)
