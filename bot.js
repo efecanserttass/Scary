@@ -313,7 +313,6 @@ client.on("message", message => {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@419936204117770241>`, true)
             .addField("Version", "0.0.1", true)
-            .addField("Çalışma Süresi", ${duration}
             .addField("Toplam Sunucu Sayısı", client.guilds.size, true)
             .addField("Toplam Kullanıcı Sayısı", client.users.size, true)
             .addField("Toplam Kanal Sayısı", client.channels.size, true)
