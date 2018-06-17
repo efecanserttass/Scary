@@ -12,14 +12,14 @@ exports.run = (client, message) => {
   .setFooter("")
   .setThumbnail("")
   .setTimestamp()
-      .addField("Moderasyon Komutları", "**ban • Belirttiğiniz kişiyi sunucudan banlar.\nkick • Belirttiğiniz kişiyi sunucudan atar.\nsustur • Belirttiğin kişiyi susturur.\ntemizle • Sohbeti belirttiğin sayı kadar siler.\nunban • Belirttiğin kişinin sunucudaki yasağını kaldırır.\noylama • Oylama Açarsınız.\nhastebin • Hastebine Kod Ekler.**\n")
-  	.addField("Eğlence Komutları", "**ngif•  Nice Gif.\nçayiç • Çay İçersiniz.\nbayrak • Şanlı Bayrağımız.\nparti • Parti Başlasın\npcaç • Bilgisayarı Açar.\nbanned • Dene Ve Gör.\n8ball • Bende Bilmiyorum.\nağla • Bot Ağlar.\natom • Atom Bombası.\ndeğişikahtapot • Çok Değişik.\nespri • Espri Atar.\nsigara • Sigara İçersiniz.\ntrollgifler • Troll.\nzekam • Zeka Bilgini Gösterir\nşanslı-sayım • Şanslı Sayınız\n", true)
-  	.addField(" Kullanıcı Komutları", "**bbilgi • Botun Bilgileri.\nsbilgi • Sunucu Bilgisi\nkurucu • Sunucunun kurucusunu gösterir.\nkullanıcıbilgim • Bu komutu kullanan her kimse hakkında bilgi verir.**\n", true)
-    .addField("Müzik Komutları Beta [KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
-    .addField("Yapımcı Komutları", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
-    .addField("**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**")
-    .addField("Matematik Komutları", "topla • Toplama İşlemi Yapar.\nçıkar • Çıkarma İşlemi Yapar.\nçarp • Çarpma İşlemi Yapar.\nböl • Bölme İşlemi Yapar\n", true)
-    .addField("Website'm", "http://scary.sitem.xyz", true)
+      .addField("[Moderasyon Komutları]", "**ban • Belirttiğiniz kişiyi sunucudan banlar.\nkick • Belirttiğiniz kişiyi sunucudan atar.\nsustur • Belirttiğin kişiyi susturur.\ntemizle • Sohbeti belirttiğin sayı kadar siler.\nunban • Belirttiğin kişinin sunucudaki yasağını kaldırır.\noylama • Oylama Açarsınız.\nhastebin • Hastebine Kod Ekler.**\n")
+  	.addField("[Eğlence Komutları]", "**ngif•  Nice Gif.\nçayiç • Çay İçersiniz.\nbayrak • Şanlı Bayrağımız.\nparti • Parti Başlasın\npcaç • Bilgisayarı Açar.\nbanned • Dene Ve Gör.\n8ball • Bende Bilmiyorum.\nağla • Bot Ağlar.\natom • Atom Bombası.\ndeğişikahtapot • Çok Değişik.\nespri • Espri Atar.\nsigara • Sigara İçersiniz.\ntrollgifler • Troll.\nzekam • Zeka Bilgini Gösterir\nşanslı-sayım • Şanslı Sayınız\n", true)
+  	.addField("[Kullanıcı Komutları]", "**bbilgi • Botun Bilgileri.\nsbilgi • Sunucu Bilgisi\nkurucu • Sunucunun kurucusunu gösterir.\nkullanıcıbilgim • Bu komutu kullanan her kimse hakkında bilgi verir.**\n", true)
+    .addField("[Müzik Komutları Beta KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
+    .addField("[Yapımcı Komutları]", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
+    .addField("[**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**]")
+    .addField("[Matematik Komutları]", "topla • Toplama İşlemi Yapar.\nçıkar • Çıkarma İşlemi Yapar.\nçarp • Çarpma İşlemi Yapar.\nböl • Bölme İşlemi Yapar\n", true)
+    .addField("[Website'm]", "http://scary.sitem.xyz", true)
   	message.channel.send({embed});
 };
 
