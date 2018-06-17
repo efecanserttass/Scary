@@ -271,4 +271,14 @@ client.on('message', msg => {
 }
 });
 
+if (msg.content === prefix + 'bot-bilgi') {
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle('Bot - Bilgi')
+        .setDescription(`Botun Prefix ${prefix}\nBotun Pingi ${msg.client.ping}\nBotun Ismi: ${botismi}\nBotun Version: ${version}`)
+        .setFooter('Scary Bilgi Sistemi')
+        return msg.channel.send(embed)
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
