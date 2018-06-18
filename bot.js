@@ -342,6 +342,7 @@ if (message.content.toLowerCase() === prefix + "şanslı-sayım") {
 }
 });
 
+const { Client, Util } = require('discord.js');
 const ytdl = require("ytdl-core");
 const { TOKEN, PREFIX, GOOGLE_API_KEY } = require('./ayarlar');
 const YouTube = require('simple-youtube-api');
