@@ -659,4 +659,14 @@ client.on('message', (message) => {
             }           
         });
 
+client.on('message', message => {
+if (message.content.toLowerCase() === prefix + "zar-at") {
+    var sans = ["https://cdn.discordapp.com/attachments/458004691402489856/458006572828721163/1_nokta.png", "https://cdn.discordapp.com/attachments/458004691402489856/458006604747374592/2_nokta.png", "https://cdn.discordapp.com/attachments/458004691402489856/458006636867354644/3_noktal.png", "https://cdn.discordapp.com/attachments/458004691402489856/458006663488733206/4_noktal.png", "https://cdn.discordapp.com/attachments/458004691402489856/458006700369117194/5_noktal.png","https://cdn.discordapp.com/attachments/458004691402489856/458006716882092032/6_noktal.png",];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Zar Sayın___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
 client.login(process.env.BOT_TOKEN);
