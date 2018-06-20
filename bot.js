@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const fs = require('fs');
 const sql = require('sqlite');
 sql.open('./score.sqlite');
-require('./util/eventLoader')(client);
 const prefix = 's!';
 const allowedUsers = ayarlar.allowedUsers;
 const roles = ayarlar.roleToDisco;
@@ -707,5 +706,42 @@ client.on('message', message => {
       sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
     });
   });
+	
+	if (command === 'istatistik' || command === 'i') {
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setTitle('İstatistik;')
+    .addField('Gecikme:', client.ping + ' ms', true)
+    .addField('Kullanıcılar:', client.guilds.reduce((a, b) => a + b.memberCount, 0), true)
+    .addField('Kanallar:', client.channels.size, true)
+    .addField('Sunucular:', client.guilds.size, true)
+    .addField('Bellek kullanımı:', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2), true)
+    .addField('Discord.JS sürümü:', Discord.version, true)
+    .setFooter('Scary, client.user.avatarURL)
+    .setTimestamp()
+    message.channel.send(embed);
+        };
+	
+	if (command === 'profil' || command === 'profile') {
+    if (!message.guild) {
+      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('Scary', client.user.avatarURL).setTimestamp()); }
+    let user = message.mentions.users.first();
+    if (message.mentions.users.size < 1) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Profil;').setDescription(message.author.tag + ', kullanım: dve!profil <@kullanıcı>.').setFooter('Scary', client.user.avatarURL).setTimestamp());
+    sql.get(`SELECT * FROM scores WHERE userId ="${user.id}"`).then(row => {
+      if (!row) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Profil;').setDescription(message.author.tag + ', hiç puanı yok.').setFooter('Dinle Ve Eğlen', client.user.avatarURL));
+      economy.fetchBalance(user.id).then((i) => {
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setAuthor(user.tag, user.avatarURL || user.defaultAvatarURL)
+    .setThumbnail(user.avatarURL || user.defaultAvatarURL)
+    .setTitle('Profil;')
+    .addField('Puan:', row.points, true)
+    .addField('Seviye:', row.level, true)
+    .setFooter('Scary', client.user.avatarURL)
+    .setTimestamp()
+    message.channel.send(embed);
+     })
+   })
+        };
 	
 client.login(process.env.BOT_TOKEN);
