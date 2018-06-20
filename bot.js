@@ -716,7 +716,7 @@ client.on('message', message => {
     .addField('Sunucular:', client.guilds.size, true)
     .addField('Bellek kullanımı:', (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2), true)
     .addField('Discord.JS sürümü:', Discord.version, true)
-    .setFooter('Scary, client.user.avatarURL)
+    .setFooter('Scary', client.user.avatarURL)
     .setTimestamp()
     message.channel.send(embed);
         };
