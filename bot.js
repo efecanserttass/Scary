@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const fs = require('fs');
 const sql = require('sqlite');
 sql.open('./score.sqlite');
-const prefix = 's!';
 const allowedUsers = ayarlar.allowedUsers;
 const roles = ayarlar.roleToDisco;
 const disco = new Discord.Client();
