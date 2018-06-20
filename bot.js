@@ -670,4 +670,35 @@ if (message.content.toLowerCase() === prefix + "zar-at") {
 }
 });
 
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.channel.type !== 'text') return;
+
+  sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+    if (!row) {
+      sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
+    } else {
+      let curLevel = Math.floor(0.3 * Math.sqrt(row.points + 1));
+      if (curLevel > row.level) {
+        row.level = curLevel;
+        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+        const embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setAuthor(message.author.tag, message.author.avatarURL || message.author.defaultAvatarURL)
+        .setThumbnail(message.author.avatarURL || message.author.defaultAvatarURL)
+        .setTitle('Seviye yükseldi;')
+        .setDescription(`Tebrikler! Yeni seviyen ${curLevel}.`)
+        .setFooter('Scary', client.user.avatarURL)
+        .setTimestamp()
+        message.channel.send(embed);
+      }
+      sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+    }
+  }).catch(() => {
+    console.error;
+    sql.run('CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)').then(() => {
+      sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
+    });
+  });
+	
 client.login(process.env.BOT_TOKEN);
