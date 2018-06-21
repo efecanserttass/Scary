@@ -675,4 +675,14 @@ if (message.content.toLowerCase() === prefix + "zar-at") {
 }
 });
 
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'i') {
+		if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
+			msg.channel.sendMessage(`Sunucu Sayısı: **${client.guilds.size}** Sunucu | Kanal Sayısı: **${client.channels.size.toLocaleString()}** Kanal | Kullanıcı Sayısı: **${client.users.size}** Kullanıcı | Botun Pingi: **${client.ping}** ms | Discord.JS Sürümü: **v${Discord.version}**`);
+		} else {
+		msg.channel.sendMessage(`Sunucu Sayısı: **${client.guilds.size}** Sunucu | Kanal Sayısı: **${client.channels.size.toLocaleString()}** Kanal | Kullanıcı Sayısı: **${client.users.size}** Kullanıcı | Botun Pingi: **${client.ping}** ms | Discord.JS Sürümü: **v${Discord.version}**`);
+		}
+	}
+});
+
 client.login(process.env.BOT_TOKEN);
