@@ -680,4 +680,26 @@ client.on('message', msg => {
 	}
 });
 
+bot.on('ready', () => {
+	console.log("Yükleniyor...");
+	setTimeout(function(){
+	console.log("Bot Hazır Yusuf'um.");
+	}, 1000);
+	function botStatus() {
+        let status = [
+            `Prefix ${botconfig.prefix}.`,
+            `${bot.guilds.size} .`,
+            `s!yardım.`,
+            `Geliştiricim Yusuf#2022`,
+            `botu ${bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Kullanıcı.`
+        ];
+        let rstatus = Math.floor(Math.random() * status.length);
+
+        bot.user.setActivity(status[rstatus], {Type: 'STREAMING'});        // BOT STATUS
+      }; setInterval(botStatus, 20000)
+        setInterval(() => {
+        dbl.postStats(bot.guilds.size)
+        }, 1800000);
+	})
+
 client.login(process.env.BOT_TOKEN);
