@@ -6,7 +6,7 @@ exports.run = (client, message) => {
   const embed = new Discord.RichEmbed()
   
   .setTitle("Botumuzun Komutları")
-  .setAuthor("Scary | Bütün Haklar Gizlidir ", "")
+  .setAuthor("Cugili| Bütün Haklar Gizlidir ", "")
   .setColor("RANDOM")
   .setDescription('**s!davet • Botun davet linkini atar.\nYeni Kodlar Gelicek\ns!bug • Bottaki bugu bildirmenizi sağlar.\ns!ping • Botun pingini gösterir.\ns!sunucubilgi • Bu komutu hangi sunucuda kullanıysanız oranın bilgisini verir.\ns!tavsiye • Botun sahibine verdiğiniz tavsiyeyi gönderir.**\n')
   .setFooter("")
