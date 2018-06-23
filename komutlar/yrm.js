@@ -8,7 +8,7 @@ exports.run = (client, message) => {
   .setTitle("Botumuzun Komutları")
   .setAuthor("Cugili| Bütün Haklar Gizlidir ", "")
   .setColor("RANDOM")
-  .setDescription('**s!davet • Botun davet linkini atar.\nYeni Kodlar Gelicek\ns!bug • Bottaki bugu bildirmenizi sağlar.\ns!ping • Botun pingini gösterir.\ns!sunucubilgi • Bu komutu hangi sunucuda kullanıysanız oranın bilgisini verir.\ns!tavsiye • Botun sahibine verdiğiniz tavsiyeyi gönderir.**\n')
+  .setDescription('**davet • Botun davet linkini atar.\nYeni Kodlar Gelicek\nbug • Bottaki bugu bildirmenizi sağlar.\nping • Botun pingini gösterir.\nsunucubilgi • Bu komutu hangi sunucuda kullanıysanız oranın bilgisini verir.\ntavsiye • Botun sahibine verdiğiniz tavsiyeyi gönderir.**\n')
   .setFooter("")
   .setThumbnail("")
   .setTimestamp()
@@ -17,7 +17,7 @@ exports.run = (client, message) => {
   	.addField("[Kullanıcı Komutları]", "**bbilgi • Botun Bilgileri.\nsbilgi • Sunucu Bilgisi\nkurucu • Sunucunun kurucusunu gösterir.\nkullanıcıbilgim • Bu komutu kullanan her kimse hakkında bilgi verir.**\n", true)
     .addField("[Müzik Komutları Beta KAPALI]", "**çal • Müzik Başlar\ndur •Müzik Durur\ngeç •Müzik Geçer\nkuyruk • Müzik Kuyruğunu Gösterir**\n", true)
     .addField("[Yapımcı Komutları]", "**Burası Güvenlik Nedeni İle Gizlidir**\n", true)
-    .addField("[**__Yapımcı Yusuf#2022 Destekleyici Oxygen#7035__**]")
+    .addField("[**__Yapımcı Yusuf#2022__**]")
     .addField("[Matematik Komutları]", "topla • Toplama İşlemi Yapar.\nçıkar • Çıkarma İşlemi Yapar.\nçarp • Çarpma İşlemi Yapar.\nböl • Bölme İşlemi Yapar\n", true)
     .addField("[Eklencek]", "Eklencek", true)
   	message.channel.send({embed});
